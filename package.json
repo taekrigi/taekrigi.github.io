@@ -1,15 +1,21 @@
 {
+  "homepage": "https://taekrigi.github.io",
   "name": "github-pages",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "core-js": "^3.8.3",
-    "vue": "^3.2.13"
+    "gh-pages": "^5.0.0",
+    "vue": "^3.2.13",
+    "vue-map-chart": "^0.0.2",
+    "vuetify": "^3.3.3"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",

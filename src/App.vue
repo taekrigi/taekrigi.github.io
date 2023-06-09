@@ -1,17 +1,20 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
-</template>
+  <div>{{  title  }}</div>
+  <v-container>
+    <MapChart
+      :countryData="countryData"
+      countryStrokeColor="#909090"
+      defaultCountryFillColor="#dadada"
+    />
+  </v-container>
+</template> 
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
+<script setup>
+import MapChart from 'vue-map-chart'
+import countryData from './country-data.json'
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+const title = "Countries I've ever been to...";
+    
 </script>
 
 <style>
