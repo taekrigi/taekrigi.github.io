@@ -1,16 +1,21 @@
-import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Movie from "./pages/Movie";
 import Home from "./pages/Home";
+import About from "./pages/About";
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/movie" component={Movie} />
-      </Routes>
-    </Router>
+    <>
+      {/* <Sidebar /> */}
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/movie" element={<Movie />}></Route>
+          <Route path="/about" element={<About />}></Route>
+          {/* <Route path="*" element={<NotFound />}></Route> */}
+        </Routes>
+      </Router>
+    </>
   );
 }
 
